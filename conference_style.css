@@ -1,0 +1,79 @@
+body { font-family: sans-serif; background: #eee; padding: 20px; }
+.card { background: white; padding: 20px; max-width: 500px; margin: 0 auto; }
+fieldset { margin-bottom: 20px; border: 1px solid #ccc; }
+
+/* Grid example */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.micro-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.micro-grid > label { text-align: right; font-weight: bold; }
+
+
+
+
+
+/* Flex example */
+.flex-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+
+
+/* Validation feedback */
+
+/* I couldn't get either :placeholder-shown or :invalid so
+I did some searching and found this works. */
+input:user-invalid {
+  border: 2px solid red;
+}
+input:user-valid {
+  border: 2px solid green;
+}
+
+
+
+/* Table Styling */
+tr:nth-child(even) {
+  background-color: #ddd; /* Example background color */
+}
+
+table{
+  border-collapse: collapse;
+  padding: 4px;
+  border: 1px solid black;
+}
+
+tbody tr:hover, tfoot tr:hover {
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+
+
+
+/* Responsive breakpoint */
+@media (max-width: 600px) {
+  .macro-grid { grid-template-columns: 1fr; }
+  label { text-align: left; }
+}

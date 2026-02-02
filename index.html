@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Reference: Conference Reg</title>
+      <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!---->
+
+<body>
+      
+      <main class="macro-grid">
+            <form>
+                  <h1>Section 1, Customer Info</h1>
+                  <fieldset class="micro-grid">
+                        <legend>Section 1, Customer Info:</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required minlength="2" placeholder="John Doe">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" required name="address" placeholder="102 Sunshine Lane">
+                        <label for="phone">Phone:</label>
+                        <input type="phone" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-5555">
+                  </fieldset>
+
+                  <h1>Section 2, The Order</h1>
+                  <fieldset>
+                        <legend>Section 2, The Order:</legend>
+                        <label>Crust Style:</label>
+                        <div class="flex-row">
+                              <label for="thinRadio">Thin</label>
+                              <input type="radio" id="thinRadio" name="CrustStyle">
+                              <label for="classicRadio">Classic</label>
+                              <input type="radio" id="classicRadio" name="CrustStyle">
+                              <label for="deepDishRadio">Deep Dish</label>
+                              <input type="radio" id="deepDishRadio" name="CrustStyle">
+                        </div><br><br>
+                        <label>Toppings:</label>
+                        <div class="flex-row">
+                              <label for="Pepperoni">Pepperoni</label>
+                              <input type="checkbox" id="Pepperoni" name="Toppings">
+                              <label for="Mushroom">Mushroom</label>
+                              <input type="checkbox" id="Mushroom" name="Toppings">
+                              <label for="Olives">Olives</label>
+                              <input type="checkbox" id="Olives" name="Toppings">
+                              <label for="GreenPeppers">Green Peppers</label>
+                              <input type="checkbox" id="GreenPeppers" name="Toppings">
+                        </div><br><br>
+                        <label>Quantity:</label>
+                        <div class="flex-row">
+                              <label for="quanity">Quanity:</label>
+                              <input type="number" id="quanity" min="1" max="10" placeholder="0" required>
+                        </div>
+                  </fieldset>
+
+                  <h1>Section 3, Delivery and Payment</h1>
+                  <fieldset class="micro-grid">
+                        <legend>Section 3</legend>
+                        <label for="delivery">Delivery Instructions:</label>
+                        <input type="textarea" id="delivery">
+                        <label for="dateandtime" >Preferred date and time:</label>
+                        <input type="datetime-local" id="dateandtime" name="dateandtime" min="2026-02-02T11:00" required>
+                        <label for="payment">Payment Method:</label>
+
+                        <select name="payment" id="payment" required>
+                              <option value="Cash">Cash</option>
+                              <option value="Card">Card</option>
+                              <option value="Debit">Debit</option>
+                        </select>
+                  </fieldset>
+
+                  <input type="submit" value="Submit">
+                  <input type="reset" value="Reset">
+            </form>
+
+            <aside>
+                  <h1>Order Summary</h1>
+
+
+                  <table>
+                        <caption>Price Breakdown</caption>
+                        <thead>
+                              <tr scope="col">
+                                    <th>Base pizza </th>
+                                    <th>Large (12"), Thin Crust</th>
+                                    <th>$16.99</th>
+                              </tr>
+
+                        </thead>
+                        <tbody>
+                              <tr>
+                                    <td>Base pizza </td>
+                                    <td>Large (12"), Thin Crust</td>
+                                    <td>$16.99</td>
+                              </tr>
+                              <tr>
+                                    <td>Toppings</td>
+                                    <td>Mushrooms, Olives, Extra Cheese</td>
+                                    <td>$4.50</td>
+                              </tr>
+                              <tr>
+                                    <td>Delivery fee</td>
+                                    <td>Standard delivery</td>
+                                    <td>$3.99</td>
+                              </tr>
+                        </tbody>
+                        <tfoot>
+                              <tr>
+                                    <th>Total</th>
+                                    <td>(example total)</td>
+                                    <td>$25.48</td>
+                              </tr>
+                        </tfoot>
+
+                  </table>
+            </aside>
+      </main>
+
+
+
+</body>
+
+</html>
